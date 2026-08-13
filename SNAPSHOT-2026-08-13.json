@@ -45,6 +45,41 @@
       "path": "all-subagents/mooncake_trace.jsonl.zst",
       "source_model_calls_sha256": "127589b336593ad11a505bcbe4fe765f9f5d2d911b35d2fa8fff0ded25d7fecc"
     },
+    "gpt-5.6": {
+      "breakdown": {
+        "models": {
+          "gpt-5.6-luna": 3190,
+          "gpt-5.6-sol": 194174,
+          "gpt-5.6-terra": 7
+        },
+        "providers": {
+          "openai": 197097,
+          "opencode_go": 274
+        }
+      },
+      "compressed_trace_sha256": "ef383e115f2069a82a4e9b8612fedcb6ba0102e9a68fdb9c960e78d3be9d5ec8",
+      "counts": {
+        "cached_input_tokens": 24886637001,
+        "cached_token_representation_ratio": 0.9979525483898064,
+        "input_tokens": 25672567282,
+        "output_tokens": 76718609,
+        "replayable_cached_block_ratio": 0.9996816760763708,
+        "replayable_cached_blocks": 48491752,
+        "represented_cached_blocks": 48507193,
+        "represented_cached_tokens": 24835682816,
+        "requests": 197371,
+        "span_ms": 2213627961,
+        "total_blocks": 50240270,
+        "unique_hash_ids": 1748518
+      },
+      "manifest": "gpt-5.6/manifest.json",
+      "path": "gpt-5.6/mooncake_trace.jsonl.zst",
+      "source_model_calls_sha256": "d6ba7bbd1572a44ad6d46c59a4fd52489aed1aae40e5c0dfde77262007bf182b",
+      "source_session_time_range": {
+        "first_started_at": "2026-07-18T13:20:47.188Z",
+        "last_observed_at": "2026-08-13T04:14:35.155Z"
+      }
+    },
     "vera": {
       "breakdown": {
         "models": {
