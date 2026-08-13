@@ -1,0 +1,101 @@
+{
+  "content_policy": "No prompts, responses, reasoning, tool input/output, or raw rollout JSONL.",
+  "converter": {
+    "path": "tools/convert_codex_calls_to_mooncake_trace.py",
+    "sha256": "911a79ae92ef9b814f518ba8901ff8d39e5107aafb70881051cf9aa25ca11d48"
+  },
+  "datasets": {
+    "all-subagents": {
+      "breakdown": {
+        "models": {
+          "alibaba-token-plan/qwen3.8-max": 58,
+          "combo/deepseek-v4-flash": 236,
+          "deepseek-direct/deepseek-v4-flash": 1452,
+          "deepseek-v4-flash": 5879,
+          "gpt-5.3-codex-spark": 1052,
+          "gpt-5.5": 2988,
+          "gpt-5.6-luna": 2981,
+          "gpt-5.6-sol": 194174,
+          "gpt-5.6-terra": 7,
+          "opencode-go/deepseek-v4-flash": 1814
+        },
+        "providers": {
+          "deepseek": 5879,
+          "openai": 200928,
+          "opencode_go": 274,
+          "opencodex": 3560
+        }
+      },
+      "compressed_trace_sha256": "ebe0bdb5eb7e8577279d5d02d97bb55434224751587998e5b6dc35c5eb68d599",
+      "counts": {
+        "cached_input_tokens": 26718477513,
+        "cached_token_representation_ratio": 0.9979782437463468,
+        "input_tokens": 27541924335,
+        "output_tokens": 87243105,
+        "replayable_cached_block_ratio": 0.9992372552618212,
+        "replayable_cached_blocks": 52039299,
+        "represented_cached_blocks": 52079022,
+        "represented_cached_tokens": 26664459264,
+        "requests": 210641,
+        "span_ms": 3774661053,
+        "total_blocks": 53898040,
+        "unique_hash_ids": 1858741
+      },
+      "manifest": "all-subagents/manifest.json",
+      "path": "all-subagents/mooncake_trace.jsonl.zst",
+      "source_model_calls_sha256": "127589b336593ad11a505bcbe4fe765f9f5d2d911b35d2fa8fff0ded25d7fecc"
+    },
+    "vera": {
+      "breakdown": {
+        "models": {
+          "combo/deepseek-v4-flash": 236,
+          "deepseek-direct/deepseek-v4-flash": 1452,
+          "deepseek-v4-flash": 5879,
+          "opencode-go/deepseek-v4-flash": 1814
+        },
+        "providers": {
+          "deepseek": 5879,
+          "opencodex": 3502
+        }
+      },
+      "compressed_trace_sha256": "491c1115c82e3c54ea71c49c14f7d2f01130b4ca0a4962997265895bf01bbb86",
+      "counts": {
+        "cached_input_tokens": 1425895936,
+        "cached_token_representation_ratio": 0.9987568910498669,
+        "input_tokens": 1446626187,
+        "output_tokens": 8246294,
+        "replayable_cached_block_ratio": 0.9917644889018156,
+        "replayable_cached_blocks": 2758584,
+        "represented_cached_blocks": 2781491,
+        "represented_cached_tokens": 1424123392,
+        "requests": 9381,
+        "span_ms": 366740203,
+        "total_blocks": 2830169,
+        "unique_hash_ids": 71585
+      },
+      "manifest": "vera/manifest.json",
+      "path": "vera/mooncake_trace.jsonl.zst",
+      "source_model_calls_sha256": "a7320cdf3923f37944f1d1cf9461d361af7d6da132b006252642ac359132788b"
+    }
+  },
+  "limitations": [
+    "timestamps are provider token-usage observation times used as arrival proxies",
+    "hash_ids are synthetic rollout-scoped anonymous 512-token block identities",
+    "sub-512-token cached tails and real content lineage are not represented"
+  ],
+  "schema_version": "agent-workload-release-v1",
+  "snapshot_id": "codex-agent-workload-mooncake-20260813",
+  "upstream_contract": {
+    "commit": "f7330a6357471a76c4dce62be675fe690e09032e",
+    "fields": [
+      "timestamp",
+      "input_length",
+      "output_length",
+      "hash_ids"
+    ],
+    "hash_block_size_tokens": 512,
+    "name": "Mooncake FAST25 request trace",
+    "repository": "https://github.com/kvcache-ai/Mooncake"
+  },
+  "visibility": "private"
+}
