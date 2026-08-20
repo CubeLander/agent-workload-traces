@@ -18,3 +18,20 @@ tracked archive against `SHA256SUMS` before extracting it:
 ```bash
 sha256sum -c SHA256SUMS
 ```
+
+## Rebuild or extend a snapshot
+
+The repository also owns the temporary conversion tools used to derive these
+content-free traces from private local Codex rollout records:
+
+```bash
+python3 prepare_codex_subagent_trace.py --selection gpt-5.6 \
+  --output /private/codex-agent-workload
+python3 convert_codex_calls_to_mooncake_trace.py \
+  --input /private/codex-agent-workload/model_calls.jsonl \
+  --output /private/codex-agent-mooncake
+```
+
+See [`docs/codex-subagent-dataset.md`](docs/codex-subagent-dataset.md) for the
+selection, schema, approximation, and privacy contracts. Verbatim rollout
+snapshots are private source material and must never be committed here.
